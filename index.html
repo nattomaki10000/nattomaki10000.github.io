@@ -16,24 +16,46 @@
 <body>
     <div class="container">
         <div class="background">
-            <css-doodle click-to-update>
-  <style>
-    @grid: 1 / 100vw 100vh / #0a0c27;
-    background-size: 200px 200px;
-    background-image: @doodle(
-      @grid: 6 / 100%;
-      @size: 4px;
-      font-size: 4px;
-      color: hsl(@r240, 30%, 50%);
-      box-shadow: @m3x5(
-        calc(4em - @nx * 1em) calc(@ny * 1em)
-          @p(@m3(currentColor), @m2(transparent)),
-        calc(2em + @nx * 1em) calc(@ny * 1em)
-          @lp
-      );
-    );
-  </style>
-</css-doodle>
+            <article class="wrap selectors">
+        <h3><a name="selectors"></a>Selectors</h3>
+
+        <section>
+          <h4><a name="selector-:doodle"></a><span>:doodle</span></h4>
+          <p>
+            The <code>:doodle</code>
+            is a special selector indicates to the component element itself.
+            Note that the styles would be over-written by your normal CSS files outside.
+            <span class="tip">(try to hover on the doodle)</span>
+          </p>
+          <p class="has-preview">
+            <textarea code>
+              :doodle { --s: 0 }
+              :doodle(:hover) { --s: 1 }
+
+              transition: .5s cubic-bezier(.175, .885, .32, 1.275);
+              transition-delay: @rand(500ms);
+              transform: translateY(calc(var(--s) * 100%));
+            </textarea>
+            <css-doodle grid="5">
+              :doodle {
+                @grid: 5 / 8em;
+                --s: 0;
+                gap: 1px;
+              }
+              :doodle(:hover) {
+                --s: 1;
+              }
+              --offset: calc(var(--s) * 100%);
+              transform: translateY(var(--offset));
+              transition: .5s cubic-bezier(.175, .885, .32, 1.275);
+              transition-delay: @rand(500ms);
+
+              transform-origin: 50% 50%;
+              background: #60569e;
+            </css-doodle>
+          </p>
+        </section>
+
             <div class="animated inseki"></div>
         </div>
         <div class="card">
