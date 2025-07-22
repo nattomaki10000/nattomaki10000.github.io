@@ -19,33 +19,7 @@ body {
     z-index: -1;
 }
 
-.bg-pattern {
-    position: absolute;
-    inset: 0;
-    background:
-    radial-gradient(2px 2px at 40px 60px, #ff000055 0%, transparent 100%),
-    radial-gradient(2px 2px at 20px 50px, #ffffff55 0%, transparent 100%),
-    radial-gradient(3px 3px at 30px 100px, #ffffff55 0%, transparent 100%),
-    radial-gradient(2px 2px at 80px 140px, #ffffff55 0%, transparent 100%),
-    radial-gradient(3px 3px at 200px 250px, #ffffff55 0%, transparent 100%);
-    background-size: 250px 250px;
-    opacity: 0.6;
-}
-
-.star {
-    position: absolute;
-    background-color: orange;
-    border-radius: 50%;
-    box-shadow: 0 0 10px white;
-    animation: twinkle 2s infinite alternate;
-}
-
-.stars-container {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-}
+body { margin: 0 }
 
 /* inseki */
 .inseki::before {
