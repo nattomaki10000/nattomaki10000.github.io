@@ -356,7 +356,7 @@ body {
 }
 
 /*スマホ*/
-@media (max-width: 768px) {
+@media (max-width: 384px) {
     .card {
         width: 40%;
     }
