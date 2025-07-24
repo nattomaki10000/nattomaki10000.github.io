@@ -300,11 +300,11 @@ body {
 @keyframes inseki {
 	from {
 		animation-timing-function: linear;
-		transform: translate(800px,-1600px) scale(1,1) rotate(0deg) skew(0deg,0deg);
+		right: -10px top: -10px scale(1,1) rotate(0deg) skew(0deg,0deg);
 		opacity: 1.0;
 	} to {
 		animation-timing-function: linear;
-		transform: translate(-700px,2500px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
+		left: -10px bottom: -10px scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
 		opacity: 1.0;
 	}
 }
