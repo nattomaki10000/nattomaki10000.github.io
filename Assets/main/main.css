@@ -59,11 +59,11 @@ body {
 .inseki::before {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -4px;
+  left: -4px;
 
-  width: 0px;
-  height: 0px;
+  width: 4px;
+  height: 4px;
   background: transparent;
 
   box-shadow:4px 4px 0 transparent,
@@ -336,11 +336,11 @@ body {
 @keyframes inseki {
 	from {
 		animation-timing-function: linear;
-		transform: translate(1000px,-1000px) scale(1,1) rotate(0deg) skew(0deg,0deg);
+		transform: translate(100%,-100%) scale(1,1) rotate(0deg) skew(0deg,0deg);
 		opacity: 1.0;
 	} to {
 		animation-timing-function: linear;
-		transform: translate(-1000px,1000px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
+		transform: translate(-100%,100%) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
 		opacity: 1.0;
 	} 
 }
