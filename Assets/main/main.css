@@ -338,8 +338,7 @@ body {
 		animation-timing-function: linear;
 		transform: translate(1000px,-1000px) scale(1,1) rotate(0deg) skew(0deg,0deg);
 		opacity: 1.0;
-	} 
-	to {
+	} to {
 		animation-timing-function: linear;
 		transform: translate(-1000px,1000px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
 		opacity: 1.0;
