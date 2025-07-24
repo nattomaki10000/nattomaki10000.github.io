@@ -300,19 +300,19 @@ body {
 @keyframes inseki {
 	from {
 		animation-timing-function: linear;
-		transform: translate(800px,-300px) scale(1,1) rotate(0deg) skew(0deg,0deg);
+		transform: translate(800px,-800px) scale(1,1) rotate(0deg) skew(0deg,0deg);
 		opacity: 1.0;
 	} to {
 		animation-timing-function: linear;
-		transform: translate(-700px,1200px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
+		transform: translate(-700px,1700px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
 		opacity: 1.0;
 	} 20% {
 		animation-timing-function: linear;
-		transform: translate(500px,0px) scale(1.25,1.25) rotate(0deg) skew(1.5deg,1.5deg);
+		transform: translate(500px,500px) scale(1.25,1.25) rotate(0deg) skew(1.5deg,1.5deg);
 		opacity: 1.0;
 	} 40% {
 		animation-timing-function: linear;
-		transform: translate(200px,300px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
+		transform: translate(200px,800px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
 		opacity: 1.0;
 	} 
 }
