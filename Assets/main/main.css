@@ -306,6 +306,10 @@ body {
 		animation-timing-function: linear;
 		transform: translate(900px,1300px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
 		opacity: 1.0;
+	} 50% {
+		animation-timing-function: linear;
+		transform: translate(0px,0px) scale(1.25,1.25) rotate(0deg) skew(1.5deg,1.5deg);
+		opacity: 1.0;
 	} 
 }
 
