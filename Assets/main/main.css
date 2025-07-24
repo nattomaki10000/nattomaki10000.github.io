@@ -66,10 +66,6 @@ body {
   height: 4px;
   background: transparent;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
   box-shadow:4px 4px 0 transparent,
 8px 4px 0 transparent,
 12px 4px 0 transparent,
