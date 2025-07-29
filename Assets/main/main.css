@@ -409,13 +409,13 @@ body {
 /*スマホ*/
 @media (max-width: 768px) {
     .card {
-        width: 90%;
+        width: 80%;
     }
 
     .icon {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
     }
 }
 
