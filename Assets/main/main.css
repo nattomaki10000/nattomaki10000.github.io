@@ -19,42 +19,6 @@ body {
     z-index: -1;
 }
 
-.bg-gradient {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at top, #1b2735 0%, transparent 70%),
-                radial-gradient(circle at bottom left, #1e3a5f 0%, transparent 50%);
-    opacity: 0.2;
-}
-
-.bg-pattern {
-    position: absolute;
-    inset: 0;
-    background:
-    radial-gradient(2px 2px at 40px 60px, #ff000055 0%, transparent 100%),
-    radial-gradient(2px 2px at 20px 50px, #ffffff55 0%, transparent 100%),
-    radial-gradient(3px 3px at 30px 100px, #ffffff55 0%, transparent 100%),
-    radial-gradient(2px 2px at 80px 140px, #ffffff55 0%, transparent 100%),
-    radial-gradient(3px 3px at 200px 250px, #ffffff55 0%, transparent 100%);
-    background-size: 250px 250px;
-    opacity: 0.6;
-}
-
-.star {
-    position: absolute;
-    background-color: orange;
-    border-radius: 50%;
-    box-shadow: 0 0 10px white;
-    animation: twinkle 2s infinite alternate;
-}
-
-.stars-container {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-}
-
 /* inseki */
 .inseki::before {
   content: "";
@@ -361,12 +325,6 @@ body {
 }
 
 /* inseki end */
-
-/*星のアニメーション */
-@keyframes twinkle {
-    0% { opacity: 0.4; transform: scale(1); }
-    100% { opacity: 0.1; transform: scale(1.2); }
-}
 
 .card {
     background: rgba(255, 74, 74, 0.1);
