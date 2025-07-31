@@ -334,7 +334,6 @@ body {
     max-width: 400px;
     text-align: center;
     border: 1px solid rgba(255, 0, 0, 0.25);
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.15), inset 0 0 15px rgba(255, 0, 0, 0.05);
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -352,17 +351,6 @@ body {
     text-shadow: 0 0 20px rgba(255, 74, 74, 0.5);
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-10px) scale(1.1); }
-}
-
 /*スマホ*/
 @media (max-width: 768px) {
     .card {
@@ -375,4 +363,3 @@ body {
         font-size: 15px;
     }
 }
-
