@@ -321,6 +321,7 @@ body {
 	animation-name: inseki;
 	-webkit-transform-origin: center center;
 	transform-origin: center center;
+    overflow: hidden;
 }
 
 /* inseki end */
@@ -363,3 +364,4 @@ body {
         font-size: 15px;
     }
 }
+
