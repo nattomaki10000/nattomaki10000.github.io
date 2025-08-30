@@ -356,6 +356,7 @@ body {
 @media (max-width: 768px) {
     .card {
         width: 70%;
+        backdrop-filter: blur(10px);
     }
 
     .icon {
@@ -364,4 +365,5 @@ body {
         font-size: 15px;
     }
 }
+
 
