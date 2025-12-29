@@ -365,5 +365,39 @@ body {
     }
 }
 
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
 
+.menu-item {
+    position: relative;
+    color: #d60064;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.menu-item:hover {
+    color: #ff9e9e;
+}
+
+.menu-item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #fc0341, #fc8803);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+    left: 0;
+}
 
