@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="nattomaki10000のサイト">
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="nattomaki10000's site!" />
+        <meta property="og:description" content="This is a nattomaki10000's site!!" />
+        <title>nattomaki10000のサイト - Contact</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" defer></script>
+        <link rel="stylesheet" href="Assets/main/contact.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://esm.sh/css-doodle/css-doodle.min.js?raw"></script>
+        <link rel="apple-touch-icon" href="/apple-touch-icon-icon.png">
+        <meta name="theme-color" content="#0a0c27" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8V3B3QPEHL"></script>
+        <script>   window.dataLayer = window.dataLayer || [];
+                   function gtag(){dataLayer.push(arguments);}
+                   gtag('js', new Date());
+                   gtag('config', 'G-8V3B3QPEHL');
+        </script>
+    </head>    
+<body>
+        <css-doodle click-to-update class="background">
+            <style>
+              @grid: 1 / 100vw 100vh / #0a0c27;
+              background-size: 200px 200px;
+              background-image: @doodle(
+              @grid: 6 / 100%;
+              @size: 4px;
+              font-size: 4px;
+              color: hsl(@r240, 30%, 50%);
+              box-shadow: @m3x5(
+              calc(4em - @nx * 1em) calc(@ny * 1em)
+                  @p(@m3(currentColor), @m2(transparent)),
+              calc(2em + @nx * 1em) calc(@ny * 1em)
+                  @lp
+              );
+            );
+          </style>
+          </css-doodle>
+          <div class="animated inseki"></div>
+            <div class="card">
+            <h1 class="title">Contact</h1>
+            <div class="menu">
+                <a href="index.html" class="menu-item">Home</a>
+                <a href="Project.html" class="menu-item">Project</a>
+            </div>
+            
+            <!-- お問い合わせフォーム -->
+            <form id="contact-form">
+                <div class="form-group">
+                    <label class='form-title'>メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="entry.1373903843" class="form-control" placeholder="例）example@mail.com" required/>
+                </div>
+                <div class="form-group">
+                    <label class='form-title'>内容をどうぞ</label>
+                    <textarea class="form-control" id="content" name="entry.1464979715" rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                </div>
+                <button type="submit" class="submit-button">送信</button>
+            </form>
+            
+            <div id="success-message" class="success-message" style="display: none;">
+                <p>✓ お問い合わせを受け付けました</p>
+                <p class="sub-message">ご連絡ありがとうございます</p>
+            </div>
+        </div>
+        
+        <script>
+            const form = document.getElementById("contact-form");
+            const successMessage = document.getElementById("success-message");
+
+            form.addEventListener("submit", function(e) {
+                e.preventDefault(); // ページ遷移を防ぐ
+
+                const formData = new FormData(form);
+
+                // フォームのアクションURLを設定（後で実際のURLに置き換えてください）
+                fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSf-7CBFg-SXMV1LFAF48YE82JkuaNqISFwtdrrCX1a8gIvlNQ/formResponse", {
+                    method: "POST",
+                    mode: "no-cors", // これが大事
+                    body: formData
+                })
+                .then(() => {
+                    // 送信成功
+                    form.style.display = "none";
+                    successMessage.style.display = "block";
+                    
+                    // 3秒後にフォームを再表示
+                    setTimeout(() => {
+                        form.reset();
+                        form.style.display = "block";
+                        successMessage.style.display = "none";
+                    }, 3000);
+                })
+                .catch(() => {
+                    alert("送信に失敗しました。再度お試しください。");
+                });
+            });
+        </script>
+</body>
+</html>

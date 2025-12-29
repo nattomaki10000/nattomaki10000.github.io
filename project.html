@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="nattomaki10000のサイト">
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="nattomaki10000's site!" />
+        <meta property="og:description" content="This is a nattomaki10000's site!!" />
+        <title>nattomaki10000のサイト</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" defer></script>
+        <link rel="stylesheet" href="Assets/main/project.css">
+        <script src="Assets/main/main.js" defer></script>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://esm.sh/css-doodle/css-doodle.min.js?raw"></script>
+        <link rel="apple-touch-icon" href="/apple-touch-icon-icon.png">
+        <meta name="theme-color" content="#0a0c27" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8V3B3QPEHL"></script>
+        <script>   window.dataLayer = window.dataLayer || [];
+                   function gtag(){dataLayer.push(arguments);}
+                   gtag('js', new Date());
+                   gtag('config', 'G-8V3B3QPEHL');
+        </script>
+    </head>    
+<body>
+        <css-doodle click-to-update class="background">
+            <style>
+              @grid: 1 / 100vw 100vh / #0a0c27;
+              background-size: 200px 200px;
+              background-image: @doodle(
+              @grid: 6 / 100%;
+              @size: 4px;
+              font-size: 4px;
+              color: hsl(@r240, 30%, 50%);
+              box-shadow: @m3x5(
+              calc(4em - @nx * 1em) calc(@ny * 1em)
+                  @p(@m3(currentColor), @m2(transparent)),
+              calc(2em + @nx * 1em) calc(@ny * 1em)
+                  @lp
+              );
+            );
+          </style>
+          </css-doodle>
+          <div class="animated inseki"></div>
+            <div class="card">
+            <h1 class="title">Project</h1>
+            <div class="menu">
+                <a href="index.html" class="menu-item">Home</a>
+                <a href="contact.html" class="menu-item">Contact</a>
+            </div>
+            
+            <div class="projects-container">
+
+                <a href="https://nattomaki10000.github.io/Minecraft-Skin-Generator/" class="project-card">
+                    <div class="project-icon">
+                        <img src="Assets/img/skin.svg" width="32" height="32">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Minecraft Skin Pack Generator</h3>
+                        <p class="project-description">スキン画像などを入れるだけでMinecraft 統合版用のスキンパックが作成できます。</p>
+                    </div>
+                </a>
+<!--
+                <a href="#" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">音楽ビジュアライザー</h3>
+                        <p class="project-description">リアルタイムで音楽に合わせて動くビジュアルエフェクト。WebAudio APIを使用した実験的作品。</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ピクセルアートエディタ</h3>
+                        <p class="project-description">ブラウザ上で動作するシンプルなピクセルアートツール。ドット絵制作に最適です。</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AIチャットボット</h3>
+                        <p class="project-description">自然言語処理を使った対話型ボット。ユーザーの質問に答える実験的なプロジェクト。</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">データビジュアライゼーション</h3>
+                        <p class="project-description">複雑なデータを美しく視覚化するツール。グラフやチャートで情報を分かりやすく表示。</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">コードエディタ</h3>
+                        <p class="project-description">シンタックスハイライト機能付きのWebベースコードエディタ。複数言語に対応しています。</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">パズルゲーム</h3>
+                        <p class="project-description">頭を使う論理パズルゲーム。100以上のステージで頭脳をフル回転させましょう。</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">タイマー＆カウンター</h3>
+                        <p class="project-description">シンプルで使いやすいタイマーアプリ。ポモドーロテクニックにも対応した便利ツール。</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">インタラクティブマップ</h3>
+                        <p class="project-description">カスタマイズ可能な地図アプリ。お気に入りの場所をマーキングして共有できます。</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">画像フィルターツール</h3>
+                        <p class="project-description">写真に様々なエフェクトをかけられるツール。レトロ風やアート風など多彩なフィルター。</p>
+                    </div>
+                </a>
+-->
+            </div>
+        </div>
+</body>
+</html>
