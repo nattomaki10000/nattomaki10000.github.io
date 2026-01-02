@@ -4,11 +4,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 0;
 }
 
 .title {
@@ -336,6 +338,7 @@ body {
 
 .card {
     background: rgba(255, 74, 74, 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 30px;
@@ -343,10 +346,11 @@ body {
     max-width: 500px;
     text-align: center;
     border: 1px solid rgba(255, 0, 0, 0.25);
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     z-index: 1;
     box-shadow: 0 8px 32px rgba(255, 0, 0, 0.2);
+    margin: 20px auto;
 }
 
 .card-image {
@@ -356,9 +360,14 @@ body {
 
 /*スマホ*/
 @media (max-width: 768px) {
+    body {
+        padding: 10px 0;
+    }
+
     .card {
         width: 85%;
         padding: 25px 20px;
+        margin: 10px auto;
     }
 
     .icon {
@@ -369,6 +378,15 @@ body {
     
     .title {
         font-size: 24px;
+    }
+    
+    .checkbox-label {
+        font-size: 13px;
+    }
+    
+    .checkbox-custom {
+        width: 18px;
+        height: 18px;
     }
 }
 
@@ -516,4 +534,63 @@ textarea.form-control {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* チェックボックスのスタイル */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #ff9e9e;
+    font-size: 14px;
+    user-select: none;
+}
+
+.checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 100, 100, 0.5);
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.checkbox-input:checked + .checkbox-custom {
+    background: linear-gradient(135deg, #fc0341, #fc8803);
+    border-color: #fc0341;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.checkbox-text {
+    line-height: 1.5;
+}
+
+/* エラーメッセージのスタイル */
+.error-message {
+    display: block;
+    color: #ff3333;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+    min-height: 18px;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
 }
