@@ -14,21 +14,6 @@
         <script src="https://esm.sh/css-doodle/css-doodle.min.js?raw"></script>
         <link rel="apple-touch-icon" href="/apple-touch-icon-icon.png">
         <meta name="theme-color" content="#0a0c27" />
-        <style>
-            /* Safari用の追加スタイル */
-            @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-                .card {
-                    -webkit-backdrop-filter: blur(10px);
-                    backdrop-filter: blur(10px);
-                }
-            }
-            /* Safari/iOSでぼかしが効かない場合の代替 */
-            @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-                .card {
-                    background: rgba(20, 15, 40, 0.85);
-                }
-            }
-        </style>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8V3B3QPEHL"></script>
         <script>
