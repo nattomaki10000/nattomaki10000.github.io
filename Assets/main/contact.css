@@ -605,6 +605,6 @@ textarea.form-control {
 /* Safari/iOSでぼかしが効かない場合の代替 */
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     .card {
-        background: rgba(20, 15, 40, 0.85);
+        background: rgba(20, 15, 40, 0.1);
     }
 }
