@@ -14,12 +14,28 @@
         <script src="https://esm.sh/css-doodle/css-doodle.min.js?raw"></script>
         <link rel="apple-touch-icon" href="/apple-touch-icon-icon.png">
         <meta name="theme-color" content="#0a0c27" />
+        <style>
+            /* Safari用の追加スタイル */
+            @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+                .card {
+                    -webkit-backdrop-filter: blur(10px);
+                    backdrop-filter: blur(10px);
+                }
+            }
+            /* Safari/iOSでぼかしが効かない場合の代替 */
+            @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+                .card {
+                    background: rgba(20, 15, 40, 0.85);
+                }
+            }
+        </style>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8V3B3QPEHL"></script>
-        <script>   window.dataLayer = window.dataLayer || [];
-                   function gtag(){dataLayer.push(arguments);}
-                   gtag('js', new Date());
-                   gtag('config', 'G-8V3B3QPEHL');
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8V3B3QPEHL');
         </script>
     </head>    
 <body>
@@ -40,9 +56,11 @@
               );
             );
           </style>
-          </css-doodle>
-          <div class="animated inseki"></div>
-            <div class="card">
+        </css-doodle>
+        
+        <div class="animated inseki"></div>
+        
+        <div class="card">
             <h1 class="title">Contact</h1>
             <div class="menu">
                 <a href="index.html" class="menu-item">Home</a>
@@ -53,12 +71,25 @@
             <form id="contact-form">
                 <div class="form-group">
                     <label class='form-title'>メールアドレス <span class="required">*</span></label>
-                    <input type="email" id="email" name="entry.1373903843" class="form-control" placeholder="例）example@mail.com" required/>
+                    <input type="email" id="email" name="entry.XXXXXXXXXX" class="form-control" placeholder="例）example@mail.com" required/>
+                    <span class="error-message" id="email-error"></span>
                 </div>
+                
                 <div class="form-group">
-                    <label class='form-title'>内容をどうぞ</label>
-                    <textarea class="form-control" id="content" name="entry.1464979715" rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    <label class='form-title'>内容をどうぞ <span class="required">*</span></label>
+                    <textarea class="form-control" id="content" name="entry.YYYYYYYYYY" rows="6" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+                    <span class="error-message" id="content-error"></span>
                 </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="human-check" name="entry.ZZZZZZZZZZ" value="私は人間です。" class="checkbox-input" required/>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">私は人間です。 <span class="required">*</span></span>
+                    </label>
+                    <span class="error-message" id="checkbox-error"></span>
+                </div>
+                
                 <button type="submit" class="submit-button">送信</button>
             </form>
             
@@ -71,16 +102,66 @@
         <script>
             const form = document.getElementById("contact-form");
             const successMessage = document.getElementById("success-message");
+            const emailInput = document.getElementById("email");
+            const contentInput = document.getElementById("content");
+            const humanCheck = document.getElementById("human-check");
+
+            // エラーメッセージをクリア
+            function clearErrors() {
+                document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+                document.querySelectorAll('.form-control, .checkbox-input').forEach(el => {
+                    el.style.borderColor = '';
+                });
+            }
+
+            // バリデーション
+            function validateForm() {
+                clearErrors();
+                let isValid = true;
+
+                // メールアドレスのバリデーション
+                const emailValue = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailValue) {
+                    document.getElementById('email-error').textContent = 'メールアドレスを入力してください';
+                    emailInput.style.borderColor = '#ff3333';
+                    isValid = false;
+                } else if (!emailRegex.test(emailValue)) {
+                    document.getElementById('email-error').textContent = '有効なメールアドレスを入力してください';
+                    emailInput.style.borderColor = '#ff3333';
+                    isValid = false;
+                }
+
+                // 内容のバリデーション
+                const contentValue = contentInput.value.trim();
+                if (!contentValue) {
+                    document.getElementById('content-error').textContent = '内容を入力してください';
+                    contentInput.style.borderColor = '#ff3333';
+                    isValid = false;
+                }
+
+                // チェックボックスのバリデーション
+                if (!humanCheck.checked) {
+                    document.getElementById('checkbox-error').textContent = 'チェックボックスにチェックを入れてください';
+                    isValid = false;
+                }
+
+                return isValid;
+            }
 
             form.addEventListener("submit", function(e) {
                 e.preventDefault(); // ページ遷移を防ぐ
 
+                // バリデーションチェック
+                if (!validateForm()) {
+                    return;
+                }
+
                 const formData = new FormData(form);
 
-                // フォームのアクションURLを設定（後で実際のURLに置き換えてください）
-                fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSf-7CBFg-SXMV1LFAF48YE82JkuaNqISFwtdrrCX1a8gIvlNQ/formResponse", {
+                fetch("https://docs.google.com/forms/d/e/1FAIpQLSf-7CBFg-SXMV1LFAF48YE82JkuaNqISFwtdrrCX1a8gIvlNQ/formResponse", {
                     method: "POST",
-                    mode: "no-cors", // これが大事
+                    mode: "no-cors",
                     body: formData
                 })
                 .then(() => {
@@ -93,11 +174,33 @@
                         form.reset();
                         form.style.display = "block";
                         successMessage.style.display = "none";
+                        clearErrors();
                     }, 3000);
                 })
                 .catch(() => {
                     alert("送信に失敗しました。再度お試しください。");
                 });
+            });
+
+            // リアルタイムでエラーをクリア
+            emailInput.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    document.getElementById('email-error').textContent = '';
+                    this.style.borderColor = '';
+                }
+            });
+
+            contentInput.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    document.getElementById('content-error').textContent = '';
+                    this.style.borderColor = '';
+                }
+            });
+
+            humanCheck.addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('checkbox-error').textContent = '';
+                }
             });
         </script>
 </body>
