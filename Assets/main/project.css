@@ -506,3 +506,17 @@ body {
 .card {
     margin: 100px 0;
 }
+
+/* Safari用の追加スタイル */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .card {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
+/* Safari/iOSでぼかしが効かない場合の代替 */
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .card {
+        background: rgba(20, 15, 40, 0.1);
+    }
+}
