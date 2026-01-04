@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <script src="https://esm.sh/css-doodle/css-doodle.min.js?raw"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .background {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        /* inseki */
+        .inseki::before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            width: 4px;
+            height: 4px;
+            background: transparent;
+            box-shadow: 64px 4px 0 rgb(199, 0, 0), 48px 8px 0 rgb(255, 90, 0), 60px 8px 0 rgb(199, 0, 0), 32px 12px 0 rgb(235, 255, 37), 44px 12px 0 rgb(255, 90, 0), 56px 12px 0 rgb(199, 0, 0), 28px 16px 0 rgb(238, 255, 0), 40px 16px 0 rgb(255, 90, 0), 24px 20px 0 rgb(238, 255, 0), 48px 20px 0 rgb(199, 0, 0), 60px 20px 0 rgb(255, 75, 0), 32px 24px 0 rgb(255, 90, 0), 44px 24px 0 rgb(179, 0, 0), 56px 24px 0 rgb(255, 75, 0), 16px 28px 0 rgb(238, 255, 0), 28px 28px 0 rgb(255, 102, 0), 40px 28px 0 rgb(179, 0, 0), 52px 28px 0 rgb(255, 75, 0), 12px 32px 0 rgb(238, 255, 0), 24px 32px 0 rgb(255, 102, 0), 36px 32px 0 rgb(179, 0, 0), 12px 36px 0 rgb(133, 0, 0), 16px 36px 0 rgb(97, 39, 0), 20px 36px 0 rgb(133, 0, 0), 24px 36px 0 rgb(133, 0, 0), 32px 36px 0 rgb(179, 0, 0), 44px 36px 0 rgb(255, 75, 0), 56px 36px 0 rgb(235, 255, 37), 8px 40px 0 rgb(97, 39, 0), 12px 40px 0 rgb(97, 39, 0), 16px 40px 0 rgb(133, 0, 0), 20px 40px 0 rgb(133, 0, 0), 24px 40px 0 rgb(97, 39, 0), 28px 40px 0 rgb(97, 39, 0), 40px 40px 0 rgb(255, 75, 0), 52px 40px 0 rgb(235, 255, 37), 4px 44px 0 rgb(97, 39, 0), 8px 44px 0 rgb(97, 39, 0), 12px 44px 0 rgb(97, 39, 0), 16px 44px 0 rgb(97, 39, 0), 20px 44px 0 rgb(97, 39, 0), 24px 44px 0 rgb(133, 0, 0), 28px 44px 0 rgb(133, 0, 0), 32px 44px 0 rgb(97, 39, 0), 36px 44px 0 rgb(255, 75, 0), 48px 44px 0 rgb(235, 255, 37), 4px 48px 0 rgb(82, 16, 0), 8px 48px 0 rgb(82, 16, 0), 12px 48px 0 rgb(97, 39, 0), 16px 48px 0 rgb(97, 39, 0), 20px 48px 0 rgb(97, 39, 0), 24px 48px 0 rgb(97, 39, 0), 28px 48px 0 rgb(133, 0, 0), 32px 48px 0 rgb(97, 39, 0), 4px 52px 0 rgb(51, 10, 0), 8px 52px 0 rgb(82, 16, 0), 12px 52px 0 rgb(82, 16, 0), 16px 52px 0 rgb(97, 39, 0), 20px 52px 0 rgb(97, 39, 0), 24px 52px 0 rgb(97, 39, 0), 28px 52px 0 rgb(97, 39, 0), 32px 52px 0 rgb(133, 0, 0), 40px 52px 0 rgb(235, 255, 37), 4px 56px 0 rgb(51, 10, 0), 8px 56px 0 rgb(51, 10, 0), 12px 56px 0 rgb(82, 16, 0), 16px 56px 0 rgb(82, 16, 0), 20px 56px 0 rgb(97, 39, 0), 24px 56px 0 rgb(97, 39, 0), 28px 56px 0 rgb(97, 39, 0), 32px 56px 0 rgb(97, 39, 0), 36px 56px 0 rgb(235, 255, 37), 8px 60px 0 rgb(51, 10, 0), 12px 60px 0 rgb(51, 10, 0), 16px 60px 0 rgb(82, 16, 0), 20px 60px 0 rgb(82, 16, 0), 24px 60px 0 rgb(97, 39, 0), 28px 60px 0 rgb(97, 39, 0), 12px 64px 0 rgb(51, 10, 0), 16px 64px 0 rgb(51, 10, 0), 20px 64px 0 rgb(82, 16, 0), 24px 64px 0 rgb(97, 39, 0);
+        }
+
+        .animated {
+            animation-duration: 3s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes inseki {
+            from {
+                animation-timing-function: linear;
+                transform: translate(800px,-300px) scale(1,1) rotate(0deg) skew(0deg,0deg);
+                opacity: 1.0;
+            }
+            20% {
+                animation-timing-function: linear;
+                transform: translate(500px,0px) scale(1.25,1.25) rotate(0deg) skew(1.5deg,1.5deg);
+                opacity: 1.0;
+            }
+            40% {
+                animation-timing-function: linear;
+                transform: translate(200px,300px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
+                opacity: 1.0;
+            }
+            to {
+                animation-timing-function: linear;
+                transform: translate(-700px,1200px) scale(1.5,1.5) rotate(0deg) skew(3deg,3deg);
+                opacity: 1.0;
+            }
+        }
+
+        .inseki {
+            animation-name: inseki;
+            transform-origin: center center;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(255, 74, 74, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            border: 1px solid rgba(255, 0, 0, 0.25);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 600;
+            color: #ff0000;
+            text-shadow: 0 0 30px rgba(255, 74, 74, 0.8);
+            margin: 0;
+            line-height: 1;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-2px, 2px);
+            }
+            40% {
+                transform: translate(-2px, -2px);
+            }
+            60% {
+                transform: translate(2px, 2px);
+            }
+            80% {
+                transform: translate(2px, -2px);
+            }
+        }
+
+        .error-title {
+            color: #ff4a4a;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+        }
+
+        .error-message {
+            color: #ff9e9e;
+            font-size: 16px;
+            margin: 15px 0 30px 0;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #fc0341, #fc8803);
+            color: white;
+            border-color: transparent;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(252, 3, 65, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #d60064;
+            border-color: #d60064;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(214, 0, 100, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .secret-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: rgba(0, 0, 0, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid #ff0000;
+            z-index: 1000;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .secret-message.active {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        .secret-message h2 {
+            color: #ff0000;
+            font-size: 32px;
+            margin: 0 0 20px 0;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+
+        .secret-message p {
+            color: #ff9e9e;
+            font-size: 18px;
+            margin: 0 0 25px 0;
+        }
+
+        .secret-message button {
+            background: linear-gradient(90deg, #fc0341, #fc8803);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .secret-message button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 85%;
+                padding: 30px 15px;
+            }
+
+            .error-code {
+                font-size: 80px;
+            }
+
+            .error-title {
+                font-size: 24px;
+            }
+
+            .error-message {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .secret-message {
+                width: 85%;
+                padding: 30px 20px;
+            }
+
+            .secret-message h2 {
+                font-size: 24px;
+            }
+
+            .secret-message p {
+                font-size: 16px;
+            }
+        }
+
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            .card {
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+            }
+        }
+
+        @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+            .card {
+                background: rgba(20, 15, 40, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <css-doodle click-to-update class="background">
+        <style>
+            @grid: 1 / 100vw 100vh / #0a0c27;
+            background-size: 200px 200px;
+            background-image: @doodle(
+                @grid: 6 / 100%;
+                @size: 4px;
+                font-size: 4px;
+                color: hsl(@r240, 30%, 50%);
+                box-shadow: @m3x5(
+                    calc(4em - @nx * 1em) calc(@ny * 1em)
+                    @p(@m3(currentColor), @m2(transparent)),
+                    calc(2em + @nx * 1em) calc(@ny * 1em)
+                    @lp
+                );
+            );
+        </style>
+    </css-doodle>
+    
+    <div class="animated inseki"></div>
+    
+    <div class="card">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Page Not Found</h2>
+        <p class="error-message">
+            お探しのページは見つかりませんでした。<br>
+            URLが間違っているか、ページが移動または削除された可能性があります。
+        </p>
+        <div class="button-group">
+            <a href="index.html" class="btn btn-primary">ホームに戻る</a>
+            <a href="javascript:history.back()" class="btn btn-secondary">前のページ</a>
+        </div>
+    </div>
+
+    <div class="secret-message" id="secretMessage">
+        <h2>🎉 隠し機能発見！</h2>
+        <p>おめでとうございます！<br>あなたは隠しメッセージを見つけました。</p>
+        <p style="font-size: 14px; color: #fc8803; margin-top: 15px;">
+            "迷子になることも、時には新しい発見への道" - nattomaki10000
+        </p>
+        <button onclick="closeSecret()">閉じる</button>
+    </div>
+
+    <script>
+        let clickCount = 0;
+        let lastClickTime = 0;
+        
+        document.body.addEventListener('click', function(e) {
+            const currentTime = Date.now();
+            
+            // 5秒以内のクリックをカウント
+            if (currentTime - lastClickTime < 5000) {
+                clickCount++;
+            } else {
+                clickCount = 1;
+            }
+            
+            lastClickTime = currentTime;
+            
+            // 5回クリックで隠しメッセージ表示
+            if (clickCount === 5) {
+                document.getElementById('secretMessage').classList.add('active');
+                clickCount = 0;
+            }
+        });
+        
+        function closeSecret() {
+            document.getElementById('secretMessage').classList.remove('active');
+        }
+        
+        // シークレットメッセージの外側をクリックで閉じる
+        document.getElementById('secretMessage').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSecret();
+            }
+        });
+    </script>
+</body>
+</html>
