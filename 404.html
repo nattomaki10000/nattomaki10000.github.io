@@ -319,8 +319,8 @@
         document.body.addEventListener('click', function(e) {
             const currentTime = Date.now();
             
-            // 5秒以内のクリックをカウント
-            if (currentTime - lastClickTime < 5000) {
+            // 2秒以内のクリックをカウント
+            if (currentTime - lastClickTime < 2000) {
                 clickCount++;
             } else {
                 clickCount = 1;
