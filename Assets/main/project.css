@@ -343,6 +343,7 @@ body {
     position: relative;
     z-index: 1;
     margin: 20px 0;
+    overflow-x: hidden;
 }
 
 .card-image {
