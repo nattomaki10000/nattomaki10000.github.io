@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .title {
