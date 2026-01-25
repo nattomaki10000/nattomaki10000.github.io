@@ -18,7 +18,7 @@ body {
 .background {
     position: fixed;
     inset: 0;
-    overflow: scroll;
+/*    overflow: scroll;*/
     z-index: -1;
 }
 
@@ -339,11 +339,11 @@ body {
     max-width: 900px;
     text-align: center;
     border: 1px solid rgba(255, 0, 0, 0.25);
-    overflow: visible;
+    overflow: auto;
     position: relative;
     z-index: 1;
     margin: 20px 0;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .card-image {
