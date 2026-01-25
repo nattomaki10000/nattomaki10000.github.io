@@ -521,3 +521,13 @@ body {
         background: rgba(20, 15, 40, 0.1);
     }
 }
+
+html, body {
+    /* 1. 画面からはみ出した要素を表示し、スクロールを許可する */
+    overflow-y: visible !important; 
+    overflow-x: hidden; /* 横スクロールを防ぎたい場合 */
+    
+    /* 2. 高さを固定せず、コンテンツに合わせて伸びるようにする */
+    height: auto !important;
+    min-height: 100vh;
+}
