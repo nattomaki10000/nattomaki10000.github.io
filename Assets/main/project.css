@@ -499,14 +499,6 @@ body {
         font-size: 12px;
     }
 }
-/* 下を消してメニューを追加*/
-body {
-    overflow: hidden;
-}
-
-.card {
-    margin: 100px 0;
-}
 
 /* Safari用の追加スタイル */
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
